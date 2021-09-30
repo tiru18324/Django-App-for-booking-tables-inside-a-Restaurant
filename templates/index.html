@@ -1,0 +1,446 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!Doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title> Vinmond Food and Restaurant </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="newsthree.jpg">
+
+        <link rel="stylesheet" href="{% static 'fonts/css/bootstrap.min.css' %}">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'fonts/css/font-awesome.min.css' %}">
+        <!--        <link rel="stylesheet" href="{% static 'css/bootstrap-theme.min.css' %}">-->
+
+
+        <!--For Plugins external css-->
+        <link rel="stylesheet" href="{% static 'fonts/css/animate/animate.css' %}" />
+        <link rel="stylesheet" href="{% static 'fonts/css/plugins.css' %}" />
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="{% static 'fonts/css/style.css' %}">
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="{% static 'fonts/css/responsive.css' %}" />
+
+        <script src="{% static 'js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+		<div class="preloader"><div class="loaded">&nbsp;</div></div>
+        <header id="home" class="navbar-fixed-top">
+            <div class="header_top_menu clearfix">	
+                <div class="container">
+                    <div class="row">	
+                        <div class="col-md-5 col-md-offset-3 col-sm-12 text-right">
+                            <div class="call_us_text">
+								<a href=""><i class="fa fa-clock-o"></i> Order Foods 24/7</a>
+								<a href=""><i class="fa fa-phone"></i>9500000000</a>
+							</div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-12">
+                            <div class="head_top_social text-right">
+                                <a href=""><i class="fa fa-facebook"></i></a>
+                                <a href=""><i class="fa fa-google-plus"></i></a>
+                                <a href=""><i class="fa fa-twitter"></i></a>
+                                <a href=""><i class="fa fa-linkedin"></i></a>
+                                <a href=""><i class="fa fa-pinterest-p"></i></a>
+                                <a href=""><i class="fa fa-youtube"></i></a>
+                                <a href=""><i class="fa fa-phone"></i></a>
+                                <a href=""><i class="fa fa-camera"></i></a>
+                            </div>	
+                        </div>
+
+                    </div>			
+                </div>
+            </div>
+
+            <!-- End navbar-collapse-->
+
+            <div class="main_menu_bg">
+                <div class="container"> 
+                    <div class="row">
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand our_logo" href="#"><img src="{% static 'images/logo.png' %}" alt="" /></a>
+                                </div>
+
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li><a href="#slider">Home</a></li>
+                                        <li><a href="#abouts">Menu</a></li>
+                                        <li><a href="#features">Features</a></li>
+                                        <li><a href="#portfolio">Delivery</a></li>
+                                        {% if user.is_authenticated %}
+                                        <li>Hello, {{user.first_name}}</li>
+                                        <li><a href="accounts/logout">Logout</a></li>
+                                        {% else %}
+                                        <li><a href="accounts/register">Register</a></li>
+                                        <li><a href="accounts/login">Login</a></li>
+                                        {% endif %}
+                                        <li><a href="accounts/login">Table Booking</a></li>
+                                        
+                                    </ul>
+                                </div><!-- /.navbar-collapse -->
+                            </div><!-- /.container-fluid -->
+                        </nav>
+                    </div>
+                </div>
+            </div>	
+        </header> <!-- End Header Section -->
+
+        <section id="slider" class="slider">
+            <div class="slider_overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_slider text-center">
+                            <div class="col-md-12">
+                                <div class="main_slider_content wow zoomIn" data-wow-duration="1s">
+                                    <h1>Vinmond</h1>
+                                    <h4>The food Restaurant</h4>
+                                    <p><em>It's very hard when you eat out every day for a living, and a new restaurant comes along and you haven't got that same vigour that you had 10 years</em></p>
+                                    <button href="" class="btn-lg"><em>Click here</em></button>
+                                    
+                                </div>
+                            </div>	
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="abouts" class="abouts">
+            <div class="container">
+                <div class="row">
+                    <div class="abouts_content">
+                        <div class="col-md-6">
+                            <div class="single_abouts_text text-center wow slideInLeft" data-wow-duration="1s">
+                                <img src="{% static 'images/ab.png' %}" alt="" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="single_abouts_text wow slideInRight" data-wow-duration="1s">
+                                <h4>About us</h4>
+                                <h3>WE ARE TASTY</h3>
+                                <p>Welcome to Vinmond Restaurant! After 30 years in business, we still serve the best indian food in the India. vinmond specializes in authentic indian cuisine — try our delicious indian curries and other variety dishes — as well as your favorite indian food. Our lunch and dinner menus offer an array of flavorful dishes that are sure to satisfy any appetite</p>
+
+                                <p>For quality food, exceptional prices, and a clean and superb dining atmosphere, Vinmond is second to none. Whether you are looking for a quick lunch, a relaxing dinner, or an appetizer and cocktails, our experienced and courteous staff will make your visit a memorable one. If you prefer to dine at home, we offer a full take-out menu for pick-up or delivery.</p>
+
+                               <button href="" class="btn-lg">Click here</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="slider_overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_features_content_area  wow fadeIn" data-wow-duration="3s">
+                            <div class="col-md-12">
+                                <div class="main_features_content text-left">
+                                    <div class="col-md-6">
+                                        <div class="single_features_text">
+                                            <h4>Special Recipes</h4>
+                                            <h3>Taste of Precious</h3>
+                                            <p>We have starters like springrolls and french onion soup as well as salads. </p>
+                                            <p>we have side dishes like garlic bread, french fries and garden vegetables and desserts like apple pie with cream so on... and variety of main courses just for you so what are you waiting for grab your meal now</p>
+
+                                            <a href="" class="btn btn-primary">click here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="portfolio_content text-center  wow fadeIn" data-wow-duration="5s">
+                        <div class="col-md-12">
+                            <div class="head_title text-center">
+                                <h4>Delightful</h4>
+                                <h3>Experience</h3>
+                            </div>
+
+                            <div class="main_portfolio_content">
+                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
+                                    <img src="{% static 'images/p1.png' %}" alt="" />
+                                    <div class="portfolio_images_overlay text-center">
+                                        <h6>Italian Source Mushroom</h6>
+                                        <p class="product_price">$22</p>
+                                        <a href="" class="btn btn-primary">Click here</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
+                                    <img src="{% static 'images/p2.png' %}" alt="" />
+                                    <div class="portfolio_images_overlay text-center">
+                                        <h6>Italian Source Mushroom</h6>
+                                        <p class="product_price">$35</p>
+                                        <a href="" class="btn btn-primary">Click here</a>
+                                    </div>								
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
+                                    <img src="{% static 'images/p3.png' %}" alt="" />
+                                    <div class="portfolio_images_overlay text-center">
+                                        <h6>Italian Source Mushroom</h6>
+                                        <p class="product_price">$67</p>
+                                        <a href="" class="btn btn-primary">Click here</a>
+                                    </div>								
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
+                                    <img src="{% static 'images/p4.png' %}" alt="" />
+                                    <div class="portfolio_images_overlay text-center">
+                                        <h6>Italian Source Mushroom</h6>
+                                        <p class="product_price">$45</p>
+                                        <a href="" class="btn btn-primary">Click here</a>
+                                    </div>								
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
+                                    <img src="{% static 'images/p5.png' %}" alt="" />
+                                    <div class="portfolio_images_overlay text-center">
+                                        <h6>Italian Source Mushroom</h6>
+                                        <p class="product_price">$52</p>
+                                        <a href="" class="btn btn-primary">Click here</a>
+                                    </div>								
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
+                                    <img src="{% static 'images/p6.png' %}" alt="" />
+                                    <div class="portfolio_images_overlay text-center">
+                                        <h6>Italian Source Mushroom</h6>
+                                        <p class="product_price">$22</p>
+                                        <a href="" class="btn btn-primary">Click here</a>
+                                    </div>								
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
+                                    <img src="{% static 'images/p7.png' %}" alt="" />
+                                    <div class="portfolio_images_overlay text-center">
+                                        <h6>Italian Source Mushroom</h6>
+                                        <p class="product_price">$19</p>
+                                        <a href="" class="btn btn-primary">Click here</a>
+                                    </div>								
+                                </div>
+                                <div class="col-md-3 col-sm-4 col-xs-6 single_portfolio_text">
+                                    <img src="{% static 'images/p8.png' %}" alt="" />
+                                    <div class="portfolio_images_overlay text-center">
+                                        <h6>Fish Fry</h6>
+                                        <p class="product_price">$15</p>
+                                        <a href="" class="btn btn-primary">Click here</a>
+                                    </div>								
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ourPakeg" class="ourPakeg">
+            <div class="container">
+                <div class="main_pakeg_content">
+                    <div class="row">
+                        <div class="head_title text-center">
+                            <h4>Amazing</h4>
+                            <h3>Delicious</h3>
+                        </div>
+
+                        <div class="single_pakeg_one text-right wow rotateInDownRight">
+                            <div class="col-md-6 col-md-offset-6 col-sm-8 col-sm-offset-4">
+                                <div class="single_pakeg_text">
+                                    <div class="pakeg_title">
+                                        <h4>Drinks</h4>
+                                    </div>
+
+                                    <ul>
+                                        <li> Cosmopolitan........................................................$44 </li>
+                                        <li> Long island iced tea........................................................$24.5 </li>
+                                        <li> Pina colada........................................................$35.0 </li>
+                                        <li> Mai tai........................................................$38.5 </li>
+                                        <li> Min julep........................................................$22.6 </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="single_pakeg_two text-left wow rotateInDownLeft">
+                            <div class="col-md-6 col-sm-8">
+                                <div class="single_pakeg_text">
+                                    <div class="pakeg_title">
+                                        <h4>Main course </h4>
+                                    </div>
+
+                                    <ul>
+                                        <li> Bombay grilled chuttney sandwich........................................................$24.5 </li>
+                                        <li> Palak paneer........................................................13.5 </li>
+                                        <li> Tuna Roast Source........................................................$24.5 </li>
+                                        <li> Butter chicken........................................................$23.0</li>
+                                        <li> Fried chicken sandwich........................................................$18.5 </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="single_pakeg_three text-left wow rotateInDownRight">
+                            <div class="col-md-6 col-md-offset-6 col-sm-8 col-sm-offset-4">
+                                <div class="single_pakeg_text">
+                                    <div class="pakeg_title">
+                                        <h4>Desserts</h4>
+                                    </div>
+
+                                    <ul>
+                                        <li> Creamy apple pie........................................................$55.5 </li>
+                                        <li> Chocolate Coffee Truffle........................................................$24.5 </li>
+                                        <li> Fudgy chewy brownies........................................................$34.5 </li>
+                                        <li> Almond malai kulfi........................................................$13.0 </li>
+                                        <li> Chocolate mousse........................................................$15.5 </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mobaileapps" class="mobailapps">
+            <div class="slider_overlay">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_mobail_apps_content wow zoomIn">
+                            <div class="col-md-5 col-sm-12 text-center">
+                                <img src="{% static 'images/iphone.png' %}" alt="" />
+                            </div>
+                            <div class="col-md-7 col-sm-12">
+                                <div class="single_monail_apps_text">
+                                    <h4> Happy to Announce </h4>
+                                    <h1>Mobile App <span>is Available in every OS platform.</span></h1>
+
+                                    <a href=""><img src="{% static 'images/google.png' %}" alt="" /></a>
+                                    <a href=""><img src="{% static 'images/apps.png' %}" alt="" /></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="footer_widget" class="footer_widget">
+            <div class="container">
+                <div class="row">
+                    <div class="footer_widget_content text-center">
+                        <div class="col-md-4">
+                            <div class="single_widget wow fadeIn" data-wow-duration="2s">
+                                <h3>Take it easy with location</h3>
+
+                                <div class="single_widget_info">
+                                    <p>27-4-850 balaji nagar.
+
+                                        <span>Nellore,</span>
+                                        <span>Andhra pradesh</span>
+                                        <span class="phone_email">phone:9000000005</span>
+                                        <span>Email: vineetha14082001@gmail.com</span></p>
+                                </div>
+
+                                <div class="footer_socail_icon">
+                                    <a href=""><i class="fa fa-facebook"></i></a>
+                                    <a href=""><i class="fa fa-google-plus"></i></a>
+                                    <a href=""><i class="fa fa-twitter"></i></a>
+                                    <a href=""><i class="fa fa-linkedin"></i></a>
+                                    <a href=""><i class="fa fa-pinterest-p"></i></a>
+                                    <a href=""><i class="fa fa-youtube"></i></a>
+                                    <a href=""><i class="fa fa-phone"></i></a>
+                                    <a href=""><i class="fa fa-camera"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="single_widget wow fadeIn" data-wow-duration="4s">
+                                <h3>Take it easy with location</h3>
+
+                                <div class="single_widget_info">
+                                    <p><span class="date_day">Monday To Friday</span>
+                                        <span>8:00am to 10:00pm(Breakfast)</span>
+                                        <span>11:00am to 10:00pm(Lunch/Diner)</span>
+
+                                        <span class="date_day">Saturday & Sunday</span>
+                                        <span>10:00am to 11:00pm(Brunch)</span>
+                                        <span>11:00am to 12:00pm(Lunch/Dinner)</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="single_widget wow fadeIn" data-wow-duration="5s">
+                                <h3>Take it easy with location</h3>
+                                
+                                <p><span class="register">Register:- 
+                                </span>
+                            
+                                <span>"Please go to register page for user Registeration and book your table now"</span></p>
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--Footer-->
+        <footer id="footer" class="footer">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="copyright wow zoomIn" data-wow-duration="3s">
+							<p>Made with <i class="fa fa-heart"></i> by <a href="http://bootstrapthemes.co">Bootstrap Themes</a>2016. All Rights Reserved</p>
+						</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+		
+		<div class="scrollup">
+			<a href="#"><i class="fa fa-chevron-up"></i></a>
+		</div>		
+
+
+        <script src="{% static 'js/vendor/jquery-1.11.2.min.js' %}"></script>
+        <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+
+        <script src="{% static 'js/jquery-easing/jquery.easing.1.3.js' %}"></script>
+        <script src="{% static 'js/wow/wow.min.js' %}"></script>
+        <script src="{% static 'js/plugins.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+    
+    </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!<![endif]-->
+<html>
+    <head>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Login page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+        <script src="main.js"></script>
+        <style>  
+          
+body{  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: lightblue;  
+  background-image: url('% static 'images/p6.png' %');
+}  
+.container {  
+    padding: 50px;  
+    background-color: lightblue;  
+ 
+}  
+  
+input[type=text], input[type=password], textarea {  
+  width: 100%;  
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  background: #f1f1f1;  
+}  
+input[type=text]:focus, input[type=password]:focus {  
+  background-color: white;  
+  outline: none;  
+}  
+ div {  
+            padding: 10px 0;  
+         }  
+hr {  
+  border: 1px solid #f1f1f1;  
+  margin-bottom: 25px;  
+}  
+.loginbtn {  
+  background-color: #4CAF50;  
+  color: white;  
+  padding: 16px 20px;  
+  margin: 8px 0;  
+  border: none;  
+  cursor: pointer;  
+  width: 100%;  
+  opacity: 0.9;  
+}  
+.registerbtn:hover {  
+  opacity: 1;  
+}  
+</style>  
+
+ </head>
+
+
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <form action="login" method="post">
+             {% csrf_token %}
+             <center>  <h1> User Login Form</h1> </center> 
+            
+             <input type="text" name="username" placeholder="username"><br>
+             <input type="password" name="password" placeholder="password"><br>
+             <input type="submit">
+        </form>
+
+
+        <div>
+            {% for message in messages %}
+            <h3> {{message}} </h3>
+            {% endfor %}
+        </div>
+
+    </body>
+</html>
