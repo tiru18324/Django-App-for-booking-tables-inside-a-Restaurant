@@ -4,7 +4,7 @@ asgiref==3.3.1
 async-generator==1.10
 attrs==20.3.0
 backcall==0.2.0
-bleach==3.2.1
+bleach==4.1.0
 cffi==1.14.4
 colorama==0.4.4
 cycler==0.10.0
@@ -39,7 +39,7 @@ nbclient==0.5.1
 nbconvert==6.0.7
 nbformat==5.0.8
 nest-asyncio==1.4.3
-notebook==6.1.5
+notebook==6.4.4
 numpy==1.19.4
 opencv-python==4.4.0.46
 packaging==20.7
@@ -57,7 +57,7 @@ pyparsing==2.4.7
 pyrsistent==0.17.3
 python-dateutil==2.8.1
 pytz==2020.5
-pywin32==300
+pywin32==301
 pywinpty==0.5.7
 PyYAML==5.3.1
 pyzmq==20.0.0
@@ -66,7 +66,7 @@ QtPy==1.9.0
 scipy==1.5.4
 Send2Trash==1.5.0
 six==1.15.0
-sqlparse==0.4.1
+sqlparse==0.4.2
 tensorflow @ https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.0.0-py3-none-any.whl
 terminado==0.9.1
 testpath==0.4.4
