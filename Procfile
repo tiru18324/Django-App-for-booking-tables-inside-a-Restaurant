@@ -1,0 +1,1 @@
+web: gunicorn vinmond.wsgi --log-file -
