@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-import os 
+import os  
 import django_heroku
 from pathlib import Path
 
@@ -82,10 +82,10 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mysite',
-        'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST': 'localhost'
+        'NAME': 'd9qrki7vr9li4p',
+        'USER': 'fhwddavqtbmsau',
+        'PASSWORD': '26702f00f8ef8aed19df763d91879332d9bc149321b1468dd56be1e168e62f3d',
+        'HOST': 'ec2-63-33-239-176.eu-west-1.compute.amazonaws.com'
     }
 }
 
@@ -133,5 +133,5 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR,'media') 
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')  
 django_heroku.settings(locals())
